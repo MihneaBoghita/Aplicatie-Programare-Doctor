@@ -29,25 +29,28 @@ namespace App_Programare_Doctor
             { 
                 StreamWriter s = new StreamWriter("Date.txt", true);
                 s.WriteLine(" ");
-                s.WriteLine("Nume: ");
+                s.Write("Nume: ");
                 s.WriteLine(textBox1.Text);
-                s.WriteLine("Prenume");
+                s.Write("Prenume: ");
                 s.WriteLine(textBox2.Text);
 
                 if (radioButton1.Checked)
-                    s.WriteLine("Genul: Femeie");
+                    s.Write("Genul: Femeie");
                 else
                     if (radioButton2.Checked)
-                    s.WriteLine("Genul: Barbat");
+                    s.Write("Genul: Barbat");
 
-                s.WriteLine("Data nasterii: ");
+                s.WriteLine();
+
+                s.Write("Data nasterii: ");
                 s.WriteLine(dateTimePicker1.Value.ToString());
 
-                s.WriteLine("Adresa: ");
+                s.Write("Adresa: ");
                 s.WriteLine(textBox3.Text);
 
+                s.Write("Simtome: ");
                 s.WriteLine(checkedListBox1.SelectedItem.ToString());
-                s.WriteLine(" ");
+                s.Write(" ");
 
                 s.Close();
 
